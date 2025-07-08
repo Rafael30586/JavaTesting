@@ -7,8 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JunitprojectLucasMoyApplication {
 
 	public static void main(String[] args) {
-		double salary = 1000;
-		System.out.println("Hello world");
+		//double salary = 1000;
+		Game game = new Game();
+		game.play();
 
 		//SpringApplication.run(JunitprojectLucasMoyApplication.class, args);
 	}

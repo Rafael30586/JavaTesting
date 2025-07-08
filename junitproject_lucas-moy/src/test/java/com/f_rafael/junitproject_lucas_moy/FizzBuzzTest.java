@@ -8,6 +8,8 @@ import java.util.List;
 
 public class FizzBuzzTest {
 
+    public static final String FIZZ = "Fizz";
+    public static final String BUZZ = "Buzz";
     private FizzBuzz game;
 
     @Before
@@ -29,9 +31,29 @@ public class FizzBuzzTest {
     public void should_returnFizz_whenMultiplyOf3(){
         //FizzBuzz game = new FizzBuzz();
         List<String> numbersList = game.getNumbers();
-        Assert.assertEquals("Fizz", numbersList.get(2));
-        Assert.assertEquals("Fizz", numbersList.get(5));
-        Assert.assertEquals("Fizz", numbersList.get(8));
-        Assert.assertEquals("Fizz", numbersList.get(11));
+        Assert.assertEquals(FIZZ, numbersList.get(2));
+        Assert.assertEquals(FIZZ, numbersList.get(5));
+        Assert.assertEquals(FIZZ, numbersList.get(8));
+        Assert.assertEquals(FIZZ, numbersList.get(11));
+    }
+
+    @Test
+    public void should_returnBuzz_whenMultiplyOf5(){
+        //FizzBuzz game = new FizzBuzz();
+        List<String> numbersList = game.getNumbers();
+        Assert.assertEquals(BUZZ, numbersList.get(4));
+        Assert.assertEquals(BUZZ, numbersList.get(9));
+        Assert.assertEquals(BUZZ, numbersList.get(19));
+        Assert.assertEquals(BUZZ, numbersList.get(24));
+    }
+
+    @Test
+    public void should_returnFizzBuzz_whenMultiplyOf3And5(){
+        //FizzBuzz game = new FizzBuzz();
+        List<String> numbersList = game.getNumbers();
+        Assert.assertEquals(FIZZ + BUZZ, numbersList.get(14));
+        Assert.assertEquals(FIZZ + BUZZ, numbersList.get(29));
+        Assert.assertEquals(FIZZ + BUZZ, numbersList.get(59));
+        Assert.assertEquals(FIZZ + BUZZ, numbersList.get(89));
     }
 }
